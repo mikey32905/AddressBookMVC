@@ -3,15 +3,21 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AddressBookMVC</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"] - Address Book</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="icon" type="image/png" href="~/img/favicon(3)-40x40.png" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AddressBookMVC</a>
+                <img src="/img/MikeWilliams(4)-Mark.png" class="d-inline-block align-text-top mr-2" width="30" height="28">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Address Book</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -19,32 +25,53 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Contacts" asp-action="Index">Address Book</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Contacts" asp-action="Index">Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Contacts" asp-action="Create">Create</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="https://github.com/mikey32905/AddressBookMVC" target="_blank">Git Repo</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-5 mb-5">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - AddressBookMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer mt-auto py-3 text-muted">
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-lg-3 gy-2 ">
+                <div class="col d-flex order-last order-lg-first text-dark align-content-center">
+                    &copy; 2021 - AddressBookMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+                <div class="col d-flex align-content-center justify-content-start justify-content-lg-center">
+                    <img src="/img/MikeWilliams(2)-Blk.png" alt="Mike Williams Logo" height="40">
+                </div>
+                <div class="col d-flex justify-content-start justify-content-lg-end align-items-center">
+                    <div class="row mt-2">
+                        <div class="col social"><a href="https://www.linkedin.com/in/michael-williams-0511835/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></i></a></div>
+                        <div class="col social"><a href="https://github.com/mikey32905/" target="_blank"><i class="fab fa-github fa-2x"></i></i></a></div>
+                        <div class="col social"><a href="https://twitter.com/mikey32905" target="_blank"><i class="fab fa-twitter fa-2x"></i></i></a></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

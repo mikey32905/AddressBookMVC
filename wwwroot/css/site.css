@@ -69,3 +69,24 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/* icon logo colors*/
+.bsicon {
+    color: purple;
+}
+
+.jsicon {
+    color: rgb(226,211,4);
+}
+
+.html5icon {
+    color: orangered;
+}
+
+.cssicon {
+    color: rgb(11,82,214);
+}
+
+.checklist i {
+    color: #7b7575;
+}

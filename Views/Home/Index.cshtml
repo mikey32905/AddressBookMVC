@@ -2,7 +2,33 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="row g-5 py-5 row-cols-1 row-cols-lg-2">
+    <div class="col order-last order-lg-first">
+        <h1 class="display-5 fw-bold 1h-1 mb-3">ADDRESS BOOK: A Coding Project</h1>
+        <h4 class="lead">
+            A simple means to keep track of your contacts.
+        </h4>
+        <ul class="fa-ul pt-2 checklist">
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>C# Fundamentals</li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>MVC Fundamentals</li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>CSS and Bootstrap Layout</li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>PostgreSQL Databases</li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Heroku Continuous Integration / Continuous Deployment</li>
+        </ul>
+        <div>
+            <a type="button" class="btn btn-outline-dark btn-lg px-4 me-md-2" asp-area="" asp-controller="Contacts" asp-action="Create">Create A Contact</a>
+        </div>
+        <h5 class="fw-bold mt-5">
+            <div class="d-flex">
+                <div class="row">
+                    <div class="col"><i class="fab fa-js-square fa-4x jsicon"></i></div>
+                    <div class="col"><i class="fab fa-bootstrap fa-4x bsicon"></i></div>
+                    <div class="col"><i class="fab fa-html5 fa-4x html5icon"></i></div>
+                    <div class="col"><i class="fab fa-css3-alt fa-4x cssicon"></i></div>
+                </div>
+            </div>
+        </h5>
+    </div>
+    <div class="col">
+        <img src="/img/addressBookLogo.png" class="img-fluid center-block d-block ax-auto" alt="App logo" width="700" height="500">
+    </div>
